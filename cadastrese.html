@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
     <style>
-
         body{
             font-family: Arial, Helvetica, sans-serif;
             background-image: url("https://w.forfun.com/fetch/f8/f87bceb903ae4ee8bf997f262272282b.jpeg");
@@ -29,6 +28,7 @@
             color: white;
             width: 100%;
             max-width: 400px; /* Defina o tamanho máximo desejado para o conteúdo */
+        
         }
         input{
             padding: 15px;
@@ -36,12 +36,15 @@
             outline: none;
             font-size: 15px;
             border-radius: 15px;
+            display: flex;
+            flex-direction: column;
             width: 90%;
         }
         label{
         color: #f5f5f5;
         font-size: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
+        align-items: flex-start;
         }
         button{
             background-color: #f9f8f88e;
@@ -65,15 +68,20 @@
 <body>
     <div>
         <h1><img src="C:\Users\crisg\OneDrive\Documentos\ReporTheFives\Repor_The_Fives\Trabalho facu\kids.png" height="150px" width="300px"></h1>
+        <label>Nome:</label>
+        <input type="text">
+        <br>
+        <label>Idade:</label>
+        <input type="number">
+        <br>
         <label>Email:</label>
         <input type="text">
         <br>
         <label>Senha:</label>
         <input type="password">
-        <br><br>
-        <button>Entrar</button>
         <br>
-        <label><a href=""><i>Cadastre-se</i></a></label>
+        <button>Inicio</button>
+        <br>
     </div>
 </body>
 </html>
