@@ -1,0 +1,27 @@
+body {
+    background-color: #231239;
+}
+h1 {
+    background-color: #231239;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 5em;
+}
+.TROFÉU img {
+    width: 60vh;
+    height: 50vh;
+    align-items: center;
+    padding: 5px 5px;
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    max-height: 70%;
+}
+.Parabéns h2 {
+    padding-bottom: 40px;
+    background-color: #231239;
+    color: white;
+    text-align: center;
+    font-size: 5em;
+}
