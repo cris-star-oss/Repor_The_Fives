@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela principal dos quiz</title>
+    <title>Tela Paises</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -18,71 +18,69 @@
             color: white; /* Adicionado para melhor legibilidade */
             flex-direction: column; /* Para centralizar verticalmente */
         }
-        h1 {
-            text-align: center; /* Centraliza o título */
-            padding: 5px 10px;
-            border-radius: 8px;
-            font-size: 50px;
-           color: rgb(205, 184, 47);
-            margin-bottom: 55px; /* Espaçamento inferior */
-        }
         .container {
             display: flex;
-            flex-wrap: wrap; /* Permite que os elementos se ajustem ao tamanho da tela */
-            justify-content: space-around; /* Distribui os elementos horizontalmente */
-            margin-top: 10px; /* Espaçamento superior */
-            width: 150vh;
-
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%; /* Ajusta a largura para 100% */
+            max-width: 150vh; /* Define a largura máxima */
+            margin-bottom: 20px; /* Espaçamento inferior */
         }
         .quiz-item {
-            text-align: center; /* Centraliza o conteúdo */
-            padding: 10px; /* Espaçamento interno */
+            text-align: center;
+            padding: 60px;
             background-color: white;
             border-radius: 15px;
             color: black;
-            width: 30%; /* Defina a largura dos itens do quiz */
-            max-width: 270px; /* Limita a largura máxima */
-            margin-bottom: 20px; /* Espaçamento inferior */
+            width: 90%;
+            max-width: 270px;
+            margin-bottom: 20px;
         }
         img {
-            display: block; /* Corrige a exibição da imagem */
-            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+            display: block;
+            margin: 0 auto;
         }
         label {
             font-size: 20px;
-            margin-top: 10px; /* Espaçamento superior */
-            display: block; /* Garante que o texto fique em uma linha separada */
+            margin-top: 10px;
+            display: block;
         }
         button {
-            background-color: #231239; /* Cor de fundo ajustada */
+            background-color: white;
             border: none;
             padding: 15px;
-            width: 100%;
-            color: white; /* Cor do texto ajustada */
+            width: 25%;
+            max-width: 50%;
+            color: black;
             font-size: 20px;
             border-radius: 15px;
-            cursor: pointer; /* Adiciona indicador de cursor */
-            margin-top: 10px; /* Espaçamento superior */
+            cursor: pointer;
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        button:hover{
+            background: #f4ab4f;
         }
         @media screen and (max-width: 768px) {
             .quiz-item {
-                width: 45%; /* Redefine a largura para dispositivos menores */
+                width: 45%;
             }
             .container {
-                width: 60%; /* Redefine a largura para dispositivos menores */
+                width: 90%; /* Ajusta a largura para dispositivos menores */
+            }
+            button {
+                width: 55%; /* Ajusta a largura do botão para dispositivos menores */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Jogos</h1>
+
     <div class="container">
         <div class="quiz-item">
             <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/paises.png?raw=true" height="100%" width="100%"></h1>
-         <label>Paises</label>
-            <button>Jogar</button>
-
+            <label>Paises</label>
         </div>
     </div>
+    <button>Jogar</button>
 </body>
 </html>
