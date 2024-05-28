@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #231239;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: white;
+            flex-direction: column;
+        }
+        h1{
+            color: #ecdd0b;
+        }
+        .container{
+            width: 60vw;
+            height: 55vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px; /* Reduzido o padding para telas menores */
+            background: white;
+            border-radius: 20px;
+        }
+        .quiz-item{
+            width: 100%; /* Ocupa toda a largura */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px; /* Espaçamento inferior entre elementos */
+        }
+        label{
+            color: #231239;
+            font-weight: 800;
+            margin-bottom: 10px; /* Espaçamento inferior para a label */
+        }
+        .resp {
+            width: 100%; /* Ocupa toda a largura */
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            background: #f4ab4f;
+            transition: 0.5s;
+            margin-bottom: 10px; /* Espaçamento inferior entre botões */
+        }
+        .resp:hover{
+            background: blue;
+        }
+        .passar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; /* Espaçamento entre os botões */
+        }
+        .voltar,
+        .passar1 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px; /* Reduzido o tamanho da fonte */
+            color: white;
+            background: #6225E6;
+            transition: 0.5s;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 10px; /* Adicionado espaçamento entre os botões */
+        }
+
+        .voltar:focus,
+        .passar1:focus {
+            outline: none;
+        }
+
+        .voltar:hover,
+        .passar1:hover {
+            transition: 0.5s;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            background: #ecdd0b;
+        }
+
+        @media screen and (max-width: 768px){
+            .container{
+                width: 90%;
+            }
+            .resp{
+                width: 100%;
+            }
+            .voltar,
+            .passar1 {
+                font-size: 16px; /* Reduzido ainda mais o tamanho da fonte para telas menores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Artes</h1>
+    <div class="container">
+        <div class="quiz-item">
+            <label>A pintura “noite estrelada” pertence a qual pintor?</label><br>
+            <button class="resp">Da Vinci</button><br>
+            <button class="resp">Van Gogh</button><br>
+            <button class="resp">Renoir</button><br>
+            <button class="resp">Picasso</button><br>
+        </div>
+        <div class="passar">
+            <button class="passar1">Passar</button>
+        </div> 
+    </div>
+</body>
+</html>
