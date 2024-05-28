@@ -1,80 +1,270 @@
 <!DOCTYPE html>
-<html lang="bt-pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA_Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <style>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: url("https://w.forfun.com/fetch/f8/f87bceb903ae4ee8bf997f262272282b.jpeg");
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-        }
-        div{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 10px 5%;
-            background-color: #231239;
-            border-radius: 15px;
-            color: white;
-            width: 100%;
-            width: 300px; /* Defina o tamanho máximo desejado para o conteúdo */
-            height: 550px;
-        }
-        input{
-            padding: 15px;
-            border: none;
-            outline: none;
-            font-size: 15px;
-            border-radius: 15px;
-            width: 90%;
-        }
-        label{
-        color: #f5f5f5;
-        font-size: 20px;
-        margin-bottom: 10px;
-        }
-        button{
-            background-color: #f9f8f88e;
-            border: none;
-            padding: 15px;
-            width: 100%;
-            color: white;
-            font-size: 20px;
-            border-radius: 15px;
-        }
-        button:hover{
-            background-color: aqua;
-            cursor: pointer;
-        }
-        @media screen and (max-width: 768px) {
-            div {
-                padding: 10px 2%;
-            }}
-    </style>
-</head>
-<body>
-    <div>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url("https://w.forfun.com/fetch/f8/f87bceb903ae4ee8bf997f262272282b.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.container h1 {
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 5%;
+    background-color: #231239;
+    border-radius: 15px;
+    color: white;
+    width: 100%;
+    width: 300px; /* Defina o tamanho máximo desejado para o conteúdo */
+    height: 550px;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff
+}
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #ecdd0b;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+}
+.label-float :-ms-input-placeholder{
+  color: #ecdd0b;
+}
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: 2px solid #fff;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid #fff;
+  background-color: #fff;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.label-float label{
+  color: #fff;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #fff
+}
+
+button{
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: #fff;
+  color: #fff;
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+p{
+  color: #fff;
+  font-size: 14pt;
+  text-align: center;
+}
+
+a{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+  padding: 5px 5px;
+}
+
+a:hover{
+  color: #fff;
+}
+
+.fa-eye{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+</style>
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
         <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/inicio.png" height="150px" width="300px"></h1>
-        <label>Email:</label>
-        <input type="text">
-        <br>
-        <label>Senha:</label>
-        <input type="password">
-        <br><br>
-        <button>Entrar</button>
-        <br>
-        <label><a href=""><i>Cadastre-se</i></a></label>
+
+        <div id="msgError"></div>
+
+        <div class="label-float">
+          <input type="text" id="usuario" paceholder="" required />
+          <label id="userLabel" for="usuario">Usuario</label>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" paceholder="" required />
+          <label id="senhaLabel" for="senha">Senha</label>
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="justify-center">
+          <button onclick="entrar()">Entrar</button>
+        </div>
+
+        <div class="justify-center">
+          <hr />
+        </div>
+
+
+          <a href="cadastrese.html">
+            Cadastre-se
+          </a>
+      </div>
     </div>
-</body>
+
+    <script>
+        let btn = document.querySelector('.fa-eye')
+
+btn.addEventListener('click', ()=>{
+  let inputSenha = document.querySelector('#senha')
+  
+  if(inputSenha.getAttribute('type') == 'password'){
+    inputSenha.setAttribute('type', 'text')
+  } else {
+    inputSenha.setAttribute('type', 'password')
+  }
+})
+
+function entrar(){
+  let usuario = document.querySelector('#usuario')
+  let userLabel = document.querySelector('#userLabel')
+  
+  let senha = document.querySelector('#senha')
+  let senhaLabel = document.querySelector('#senhaLabel')
+  
+  let msgError = document.querySelector('#msgError')
+  let listaUser = []
+  
+  let userValid = {
+    nome: '',
+    user: '',
+    senha: ''
+  }
+  
+  listaUser = JSON.parse(localStorage.getItem('listaUser'))
+  
+  listaUser.forEach((item) => {
+    if(usuario.value == item.userCad && senha.value == item.senhaCad){
+       
+      userValid = {
+         nome: item.nomeCad,
+         user: item.userCad,
+         senha: item.senhaCad
+       }
+      
+    }
+  })
+   
+  if(usuario.value == userValid.user && senha.value == userValid.senha){
+    window.location.href = 'TelaPrincipalQuiz.html'
+    
+    let mathRandom = Math.random().toString(16).substr(2)
+    let token = mathRandom + mathRandom
+    
+    localStorage.setItem('token', token)
+    localStorage.setItem('userLogado', JSON.stringify(userValid))
+  } else {
+    userLabel.setAttribute('style', 'color: red')
+    usuario.setAttribute('style', 'border-color: red')
+    senhaLabel.setAttribute('style', 'color: red')
+    senha.setAttribute('style', 'border-color: red')
+    msgError.setAttribute('style', 'display: block')
+    msgError.innerHTML = 'Usuário ou senha incorretos'
+    usuario.focus()
+  }
+  
+}
+    </script>
+  </body>
 </html>
