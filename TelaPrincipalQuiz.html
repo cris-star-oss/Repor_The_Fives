@@ -31,6 +31,10 @@
             flex-wrap: wrap; /* Permite que os elementos se ajustem ao tamanho da tela */
             justify-content: space-around; /* Distribui os elementos horizontalmente */
             margin-top: 20px; /* Espaçamento superior */
+            width: 90%; /* Largura do contêiner */
+            max-width: 1200px; /* Largura máxima do contêiner */
+            margin-left: auto;
+            margin-right: auto;
         }
         .quiz-item {
             text-align: center; /* Centraliza o conteúdo */
@@ -52,19 +56,18 @@
             display: block; /* Garante que o texto fique em uma linha separada */
         }
         button {
-            background-color: #231239; /* Cor de fundo ajustada */
+            background-color: #f9f8f8; /* Cor de fundo ajustada */
             border: none;
             padding: 15px;
             width: 100%;
-            color: white; /* Cor do texto ajustada */
+            color: black; /* Cor do texto ajustada */
             font-size: 20px;
             border-radius: 15px;
             cursor: pointer; /* Adiciona indicador de cursor */
             margin-top: 10px; /* Espaçamento superior */
         }
-        .quiz-item a{
-            text-decoration: none;
-            color: white;
+        button:hover{
+            background: #231239;
         }
         @media screen and (max-width: 768px) {
             .quiz-item {
@@ -77,19 +80,19 @@
     <h1>Jogos</h1>
     <div class="container">
         <div class="quiz-item">
-            <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/inicio.png" height="50px" width="150px"></h1>
+            <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/esporte.png" height="100%" width="150px"></h1>
             <label>Esportes</label>
-            <button><a href="TelaEsporte.html">Iniciar</a></button>
+            <button>Iniciar</button>
         </div>
         <div class="quiz-item">
-            <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/inicio.png" height="50px" width="150px"></h1>
+            <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/artes.png?raw=true" height="100%" width="150px"></h1>
             <label>Artes</label>
-            <button><a href="TelaArtes.html">Iniciar</a></button>
+            <button>Iniciar</button>
         </div>
         <div class="quiz-item">
-            <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/inicio.png" height="50px" width="150px"></h1>
-            <label><Paises</label>
-            <button><a href="TelaPaises.html">Iniciar</a></button>
+            <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/paises.png?raw=true" height="100%" width="150px"></h1>
+            <label>Paises</label>
+            <button>Iniciar</button>
         </div>
     </div>
 </body>
