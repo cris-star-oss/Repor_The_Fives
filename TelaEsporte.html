@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela principal dos quiz</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #231239;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: white; /* Adicionado para melhor legibilidade */
+            flex-direction: column; /* Para centralizar verticalmente */
+        }
+        h1 {
+            text-align: center; /* Centraliza o título */
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 50px;
+            color: rgb(205, 184, 47);
+            margin-bottom: 55px; /* Espaçamento inferior */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os elementos se ajustem ao tamanho da tela */
+            justify-content: space-around; /* Distribui os elementos horizontalmente */
+            margin-top: 10px; /* Espaçamento superior */
+            width: 150vh;
+
+        }
+        .quiz-item {
+            text-align: center; /* Centraliza o conteúdo */
+            padding: 10px; /* Espaçamento interno */
+            background-color: white;
+            border-radius: 15px;
+            color: black;
+            width: 30%; /* Defina a largura dos itens do quiz */
+            max-width: 270px; /* Limita a largura máxima */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        img {
+            display: block; /* Corrige a exibição da imagem */
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+        }
+        label {
+            font-size: 20px;
+            margin-top: 10px; /* Espaçamento superior */
+            display: block; /* Garante que o texto fique em uma linha separada */
+        }
+        button {
+            background-color: #231239; /* Cor de fundo ajustada */
+            border: none;
+            padding: 15px;
+            width: 100%;
+            color: white; /* Cor do texto ajustada */
+            font-size: 20px;
+            border-radius: 15px;
+            cursor: pointer; /* Adiciona indicador de cursor */
+            margin-top: 10px; /* Espaçamento superior */
+        }
+        @media screen and (max-width: 768px) {
+            .quiz-item {
+                width: 45%; /* Redefine a largura para dispositivos menores */
+            }
+            .container {
+                width: 60%; /* Redefine a largura para dispositivos menores */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogos</h1>
+    <div class="container">
+        <div class="quiz-item">
+            <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/esporte.png?raw=true" height="100%" width="100%"></h1>
+            <label>Esportes</label>
+            <button>Jogar</button>
+
+        </div>
+    </div>
+</body>
+</html>
