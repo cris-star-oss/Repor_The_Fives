@@ -22,9 +22,11 @@
             text-align: center; /* Centraliza o título */
             padding: 5px 10px;
             border-radius: 8px;
-            font-size: 50px;
+            font-size: 5vh;
             color: rgb(205, 184, 47);
             margin-bottom: 20px; /* Espaçamento inferior */
+            display: flex;
+            flex-wrap: wrap;
         }
         .container {
             display: flex;
@@ -41,10 +43,14 @@
             padding: 10px; /* Espaçamento interno */
             background-color: white;
             border-radius: 15px;
+            border-color: black;
             color: black;
             width: 30%; /* Defina a largura dos itens do quiz */
             max-width: 300px; /* Limita a largura máxima */
             margin-bottom: 20px; /* Espaçamento inferior */
+        }
+        .quiz-item a{
+            text-decoration: none;
         }
         img {
             display: block; /* Corrige a exibição da imagem */
@@ -61,38 +67,82 @@
             width: 100%;
             color: black; /* Cor do texto ajustada */
             font-size: 20px;
-            border-radius: 15px;
+            border-radius: 40px 40px 40px 40px;
+            border-color: #7a50b1;
             cursor: pointer; /* Adiciona indicador de cursor */
             margin-top: 10px; /* Espaçamento superior */
         }
         button:hover{
-            background: #231239;
+            background: rgb(148, 130, 253);
+            box-shadow: 0 0 30px 5px rgba(45, 41, 78, 0.815);
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+
+        }
+        .deslog button{
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 0px 40px 40px 40px;
+            color: black;
+            width: 10vh;
+            margin-left: 15px;
+            margin-top: 15px;
         }
         @media screen and (max-width: 768px) {
             .quiz-item {
                 width: 45%; /* Redefine a largura para dispositivos menores */
             }
         }
+        
+            
     </style>
 </head>
 <body>
-    <h1>Jogos</h1>
+    <div class="deslog">
+        <button onclick="sair()" > Sair</button>
+        <h1 id="logado"></h1>
+    </div>
+        
+    <div class="games">
+        <h1>Jogos</h1>
+    </div>
+    
     <div class="container">
         <div class="quiz-item">
             <h1><img src="https://raw.githubusercontent.com/cris-star-oss/Repor_The_Fives/main/Trabalho%20facu/esporte.png" height="100%" width="150px"></h1>
             <label>Esportes</label>
-            <button>Iniciar</button>
+            <a href="TelaEsporte.html"><button>Iniciar</button> </a>
         </div>
         <div class="quiz-item">
             <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/artes.png?raw=true" height="100%" width="150px"></h1>
             <label>Artes</label>
-            <button>Iniciar</button>
+            <a href="TelaArtes.html"><button>Iniciar</button></a>
         </div>
         <div class="quiz-item">
             <h1><img src="https://github.com/cris-star-oss/Repor_The_Fives/blob/main/Trabalho%20facu/paises.png?raw=true" height="100%" width="150px"></h1>
-            <label>Paises</label>
-            <button>Iniciar</button>
+            <label>Países</label>
+        <a href="TelaPaises.html"><button>Iniciar</button> </a>
         </div>
     </div>
+<script>
+  if (localStorage.getItem("token") == null) {
+  alert("Você precisa estar logado para acessar essa página");
+  window.location.href = "TelaInicio.html";
+}
+
+const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+
+const logado = document.querySelector("#logado");
+logado.innerHTML = `Bem-vindo, ${userLogado.nome}!`;
+
+function sair() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userLogado");
+  window.location.href = "TelaInicio.html";
+}
+</script>
+
 </body>
 </html>
