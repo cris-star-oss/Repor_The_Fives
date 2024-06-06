@@ -46,17 +46,21 @@
             display: block;
         }
         button {
-            background-color: transparent;
-            max-width: 100%;
-            max-height: 100%;
-            border: none;
+            background-color: #f9f8f8; /* Cor de fundo ajustada */
+            padding: 15px;
+            width: 100%;
+            color: black; /* Cor do texto ajustada */
             font-size: 20px;
+            border-radius: 40px 40px 40px 40px;
+            border-color: #7a50b1;
+            cursor: pointer; /* Adiciona indicador de cursor */
+            margin-top: 10px; /* Espaçamento superior */
         }
         button:hover{
             background: #f4ab4f;
         }
         a{
-            background-color: white;
+            background-color: transparent;
             border: none;
             padding: 15px;
             width: 25%;
@@ -67,9 +71,6 @@
             cursor: pointer;
             margin-bottom: 20px; /* Espaçamento inferior */
             text-align: center;
-        }
-        a:hover{
-            background: #f4ab4f;
         }
         .deslog button{
             position: absolute;
@@ -95,6 +96,10 @@
     </style>
 </head>
 <body>
+    <div class="deslog">
+        <button onclick="sair()" > Voltar</button>
+        <h1 id="logado"></h1>
+    </div>
 
     <div class="container">
         <div class="quiz-item">
