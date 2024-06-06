@@ -46,6 +46,16 @@
             display: block;
         }
         button {
+            background-color: transparent;
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            font-size: 20px;
+        }
+        button:hover{
+            background: #f4ab4f;
+        }
+        a{
             background-color: white;
             border: none;
             padding: 15px;
@@ -56,9 +66,20 @@
             border-radius: 15px;
             cursor: pointer;
             margin-bottom: 20px; /* Espaçamento inferior */
+            text-align: center;
         }
-        button:hover{
+        a:hover{
             background: #f4ab4f;
+        }
+        .deslog button{
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 0px 40px 40px 40px;
+            color: black;
+            width: 10vh;
+            margin-left: 15px;
+            margin-top: 15px;
         }
         @media screen and (max-width: 768px) {
             .quiz-item {
@@ -81,6 +102,11 @@
             <label>Artes</label>
         </div>
     </div>
-    <button>Jogar</button>
+    <a href="Perguntas_Artes/Perguntas_artes1.html"><button>Jogar</button></a>
+    <script>
+    function sair() {
+        window.location.href = "TelaPrincipalQuiz.html";
+    }
+    </script>
 </body>
 </html>
